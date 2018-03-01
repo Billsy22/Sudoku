@@ -11,19 +11,17 @@ import UIKit
 
 class SudokuGame {
     
-//    // MARK: -  Properties
-//    let block: [UITextView]
-//    let row: [UITextView]
-//    let column: [UITextView]
-//
-//    // MARK: -  Initializer
-//    init(block: [UITextView], row: [UITextView], column: [UITextView]) {
-//        self.block = []
-//        self.row = []
-//        self.column = []
-//
+    // MARK: -  Properties
+    let topLeft: Block
+    let topRight: Block
+    let bottomLeft: Block
+    let bottomRight: Block
     
-    let block: Block
-    let row: Row
-    let column: Column
+    // MARK: -  Initializer
+    init(topLeft: Block, topRight: Block, bottomLeft: Block, bottomRight: Block) {
+        self.topLeft = topLeft
+        self.topRight = topRight
+        self.bottomLeft = bottomLeft
+        self.bottomRight = bottomRight
+    }
 }

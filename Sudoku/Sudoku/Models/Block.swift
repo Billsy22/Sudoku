@@ -11,11 +11,17 @@ import UIKit
 
 class Block {
     
-    // MARK: -  Property
-    let block: [UITextView]
+    // MARK: -  Properties
+    let topLeft: Square
+    let topRight: Square
+    let bottomLeft: Square
+    let bottomRight: Square
     
-    
-    init(block: [UITextView]) {
-        self.block = block
+    // MARK: -  Initializer
+    init(topLeft: Square, topRight: Square, bottomLeft: Square, bottomRight: Square) {
+        self.topLeft = topLeft
+        self.topRight = topRight
+        self.bottomLeft = bottomLeft
+        self.bottomRight = bottomRight
     }
 }

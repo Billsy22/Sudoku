@@ -11,9 +11,10 @@ import Foundation
 class Number {
     
     // MARK: -  Properties
-    let one = 1
-    let two = 2
-    let three = 3
-    let four = 4
+    let number: Int
     
+    // MARK: -  Initializer
+    init(number: Int) {
+        self.number = number
+    }
 }
