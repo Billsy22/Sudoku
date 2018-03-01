@@ -12,16 +12,16 @@ import UIKit
 class Block {
     
     // MARK: -  Properties
-    let one: Int?
-    let two: Int?
-    let three: Int?
-    let four: Int?
+    let topLeft: Square
+    let topRight: Square
+    let bottomLeft: Square
+    let bottomRight: Square
     
     // MARK: -  Initializer
-    init(one: Int?, two: Int?, three: Int?, four: Int?) {
-        self.one = one
-        self.two = two
-        self.three = three
-        self.four = four
+    init(topLeft: Square, topRight: Square, bottomLeft: Square, bottomRight: Square) {
+        self.topLeft = topLeft
+        self.topRight = topRight
+        self.bottomLeft = bottomLeft
+        self.bottomRight = bottomRight
     }
 }

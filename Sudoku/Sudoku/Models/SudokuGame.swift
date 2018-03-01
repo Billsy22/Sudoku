@@ -12,16 +12,16 @@ import UIKit
 class SudokuGame {
     
     // MARK: -  Properties
-    let blockOne: Block
-    let blockTwo: Block
-    let blockThree: Block
-    let blockFour: Block
+    let topLeft: Block
+    let topRight: Block
+    let bottomLeft: Block
+    let bottomRight: Block
     
     // MARK: -  Initializer
-    init(blockOne: Block, blockTwo: Block, blockThree: Block, blockFour: Block) {
-        self.blockOne = blockOne
-        self.blockTwo = blockTwo
-        self.blockThree = blockThree
-        self.blockFour = blockFour
+    init(topLeft: Block, topRight: Block, bottomLeft: Block, bottomRight: Block) {
+        self.topLeft = topLeft
+        self.topRight = topRight
+        self.bottomLeft = bottomLeft
+        self.bottomRight = bottomRight
     }
 }
