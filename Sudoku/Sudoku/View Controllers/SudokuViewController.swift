@@ -8,11 +8,15 @@
 
 import UIKit
 
-class SudokuViewController: UIViewController {
+class SudokuViewController: UIViewController, UITextFieldDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     // Buttons (1-4) for user to type in
     @IBAction func buttonOneTapped(_ sender: Any) {
+        
     }
     
     @IBAction func buttonTwoTapped(_ sender: Any) {
@@ -26,7 +30,7 @@ class SudokuViewController: UIViewController {
     
     // Stack 1 (Top Left Corner of 4)
     @IBOutlet weak var stack1aaTextTapped: UITextView!
-
+    
     @IBOutlet weak var stack1abTextTapped: UITextView!
     
     @IBOutlet weak var stack1baTextTapped: UITextView!
@@ -47,6 +51,19 @@ class SudokuViewController: UIViewController {
     
     @IBOutlet weak var stack3abButtonTapped: UITextView!
     
+    @IBOutlet weak var stack3baButtonTapped: UITextView!
+    
+    @IBOutlet weak var stack3bbButtonTapped: UITextView!
+    
+    // Stack 4 (Bottom Right Corner of 4)
+    
+    @IBOutlet weak var stack4aaButtonTapped: UITextView!
+    
+    @IBOutlet weak var stack4abButtonTapped: UITextView!
+    
+    @IBOutlet weak var stack4baButtonTapped: UITextView!
+    
+    @IBOutlet weak var stack4bbButtonTapped: UITextView!
     
     
     override func viewDidLoad() {
