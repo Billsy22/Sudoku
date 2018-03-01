@@ -8,8 +8,10 @@
 
 import UIKit
 
-class SudokuTableViewController: UITableViewController {
+class SudokuTableViewController: UITableViewController  {
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -19,8 +21,22 @@ class SudokuTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+ 
+    
+
+    @IBAction func easyButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func mediumButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func hardButtonTapped(_ sender: Any) {
+    }
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
