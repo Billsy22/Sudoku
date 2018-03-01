@@ -12,6 +12,7 @@ class SudokuViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SudokuGameModeController.shared.intiateGame(stack1AA: stack1aaTextTapped, stack1AB: stack1abTextTapped, stack1BA: stack1baTextTapped, stack1BB: stack1bbTextTapped, stack2AA: stack2aaButtonTapped, stack2AB: stack2abButtonTapped, stack2BA: stack2baButtonTapped, stack2BB: stack2bbButtonTapped, stack3AA: stack3aaButtonTapped, stack3AB: stack3abButtonTapped, stack3BA: stack3baButtonTapped, stack3BB: stack3bbButtonTapped, stack4AA: stack4aaButtonTapped, stack4AB: stack4abButtonTapped, stack4BA: stack4baButtonTapped, stack4BB: stack4bbButtonTapped)
     }
     
     // Buttons (1-4) for user to type in
@@ -64,14 +65,10 @@ class SudokuViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var stack4baButtonTapped: UITextView!
     
     @IBOutlet weak var stack4bbButtonTapped: UITextView!
+
     
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setUpGame() {
+        
     }
-
-
 }
 
