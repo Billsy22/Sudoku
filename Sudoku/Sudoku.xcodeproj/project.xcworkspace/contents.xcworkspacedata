@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/taylorbills/Desktop/DevMountain/Unit 6/Sudoku/Sudoku/Sudoku/SudokuTableViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/taylorbills/Desktop/DevMountain/Unit 6/Sudoku/Sudoku/Sudoku/SudokuViewController.swift">
+   </FileRef>
+   <FileRef
       location = "self:Sudoku.xcodeproj">
    </FileRef>
 </Workspace>
