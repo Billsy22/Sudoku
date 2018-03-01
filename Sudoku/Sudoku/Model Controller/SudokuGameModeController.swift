@@ -21,14 +21,20 @@ class SudokuGameModeController {
     // MARK: -  Properties
     static let shared = SudokuGameModeController()
     var mode: GameMode = .easy
-    
+
     // MARK: -  Change Game Mode Function...Implement later
-    func changeGameMode() {
+    func initiateGameMode() {
         switch mode {
         case .easy:
-            var sudokuGame = SudokuGame(block: [], row: [], column: [])
+            let blockOne = Block(one: nil, two: 2, three: nil, four: nil)
+            let blockTwo = Block(one: 4, two: nil, three: nil, four: 2)
+            let blockThree = Block(one: 1, two: nil, three: nil, four: 3)
+            let blockFour = Block(one: nil, two: nil, three: 1, four: nil)
+            SudokuGame(blockOne: blockOne, blockTwo: blockTwo, blockThree: blockThree, blockFour: blockFour)
         case .medium:
+            print("reverting to easy")
         case .hard:
+            print("reverting to easy")
         }
     }
 }

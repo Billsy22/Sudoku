@@ -11,11 +11,17 @@ import UIKit
 
 class Block {
     
-    // MARK: -  Property
-    let block: [UITextView]
+    // MARK: -  Properties
+    let one: Int?
+    let two: Int?
+    let three: Int?
+    let four: Int?
     
-    
-    init(block: [UITextView]) {
-        self.block = block
+    // MARK: -  Initializer
+    init(one: Int?, two: Int?, three: Int?, four: Int?) {
+        self.one = one
+        self.two = two
+        self.three = three
+        self.four = four
     }
 }
