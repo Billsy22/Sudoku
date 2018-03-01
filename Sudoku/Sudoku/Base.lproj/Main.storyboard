@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="98.50074962518741"/>
         </scene>
-        <!--View Controller-->
+        <!--Sudoku View Controller-->
         <scene sceneID="Ir2-8Q-1ut">
             <objects>
-                <viewController id="xjY-e7-mij" sceneMemberID="viewController">
+                <viewController id="xjY-e7-mij" customClass="SudokuViewController" customModule="Sudoku" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AYO-VI-43q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,16 +81,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sXt-pD-4mF" userLabel="masterStack">
                                 <rect key="frame" x="23.5" y="164" width="328" height="327"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="E5d-8E-cfz" userLabel="abStack">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="E5d-8E-cfz" userLabel="Stack12">
                                         <rect key="frame" x="0.0" y="0.0" width="328" height="161"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9RW-fs-Gtp" userLabel="stackA">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9RW-fs-Gtp" userLabel="stack1">
                                                 <rect key="frame" x="0.0" y="0.0" width="161" height="161"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="b0p-aC-H1l">
                                                         <rect key="frame" x="0.0" y="0.0" width="161" height="78"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yAc-eE-IIt">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yAc-eE-IIt" userLabel="aaText">
                                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -99,7 +99,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NKM-dh-s2G">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NKM-dh-s2G" userLabel="abText">
                                                                 <rect key="frame" x="83" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -116,7 +116,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zg8-yk-mc3">
                                                         <rect key="frame" x="0.0" y="83" width="161" height="78"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gBI-C9-z5o">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gBI-C9-z5o" userLabel="baText">
                                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -125,7 +125,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UqX-Vm-9hC">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UqX-Vm-9hC" userLabel="bbText">
                                                                 <rect key="frame" x="83" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -145,13 +145,13 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="n9M-T7-QWT" userLabel="stackB">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="n9M-T7-QWT" userLabel="stack2">
                                                 <rect key="frame" x="167" y="0.0" width="161" height="161"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4x3-Xi-LPW">
                                                         <rect key="frame" x="0.0" y="0.0" width="161" height="78"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cv5-aR-i5w">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cv5-aR-i5w" userLabel="aaText">
                                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -160,7 +160,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tDv-Jc-OMQ">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tDv-Jc-OMQ" userLabel="abText">
                                                                 <rect key="frame" x="83" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -177,7 +177,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2K1-eO-Rhv">
                                                         <rect key="frame" x="0.0" y="83" width="161" height="78"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kHT-6O-HsU">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kHT-6O-HsU" userLabel="baText">
                                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -186,7 +186,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qmb-bJ-Vie">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qmb-bJ-Vie" userLabel="bbText">
                                                                 <rect key="frame" x="83" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -208,16 +208,16 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-wo-uJg" userLabel="cdStack">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-wo-uJg" userLabel="Stack34">
                                         <rect key="frame" x="0.0" y="166" width="328" height="161"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="v9b-do-hOD" userLabel="stackC">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="v9b-do-hOD" userLabel="stack3">
                                                 <rect key="frame" x="0.0" y="0.0" width="161.5" height="161"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tuI-Nk-77e">
                                                         <rect key="frame" x="0.0" y="0.0" width="161.5" height="78"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Aho-O7-amb">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Aho-O7-amb" userLabel="aaText">
                                                                 <rect key="frame" x="0.0" y="0.0" width="78.5" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -226,7 +226,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1sA-Fc-0lo">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1sA-Fc-0lo" userLabel="abText">
                                                                 <rect key="frame" x="83.5" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -243,7 +243,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Tw1-au-oR8">
                                                         <rect key="frame" x="0.0" y="83" width="161.5" height="78"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gF5-U6-GZa">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gF5-U6-GZa" userLabel="baText">
                                                                 <rect key="frame" x="0.0" y="0.0" width="78.5" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -252,7 +252,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JyC-MR-qHD">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JyC-MR-qHD" userLabel="bbText">
                                                                 <rect key="frame" x="83.5" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -272,13 +272,13 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H6c-Kv-OC6" userLabel="stackD">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H6c-Kv-OC6" userLabel="stack4">
                                                 <rect key="frame" x="166.5" y="0.0" width="161.5" height="161"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Yv-f3-2LP">
                                                         <rect key="frame" x="0.0" y="0.0" width="161.5" height="78"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QzC-7O-FvU">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QzC-7O-FvU" userLabel="aaText">
                                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -287,7 +287,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7EK-wT-CEP">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7EK-wT-CEP" userLabel="abText">
                                                                 <rect key="frame" x="83" y="0.0" width="78.5" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -304,7 +304,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8v2-iN-Q8d">
                                                         <rect key="frame" x="0.0" y="83" width="161.5" height="78"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BVp-8y-XY6">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BVp-8y-XY6" userLabel="baText">
                                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -313,7 +313,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X0G-y0-WBp">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="X" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X0G-y0-WBp" userLabel="bbText">
                                                                 <rect key="frame" x="83" y="0.0" width="78.5" height="78"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -347,30 +347,42 @@
                                             <constraint firstAttribute="width" secondItem="TjV-vu-mGF" secondAttribute="height" multiplier="1:1" id="Xcz-Is-hmS"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonOneTapped:" destination="nfl-az-eTr" eventType="touchUpInside" id="fTw-HH-fCe"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU8-jo-1el" userLabel="twoButton">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU8-jo-1el" userLabel="twoButton">
                                         <rect key="frame" x="83.5" y="0.0" width="78" height="78.5"/>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fU8-jo-1el" secondAttribute="height" multiplier="1:1" id="S9M-Up-Akq"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonTwoTapped:" destination="nfl-az-eTr" eventType="touchUpInside" id="Gx6-rt-kHC"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmX-gC-Zg5" userLabel="threeButton">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmX-gC-Zg5" userLabel="threeButton">
                                         <rect key="frame" x="166.5" y="0.0" width="78.5" height="78.5"/>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XmX-gC-Zg5" secondAttribute="height" multiplier="1:1" id="DIc-t1-BlE"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonThreeTapped:" destination="nfl-az-eTr" eventType="touchUpInside" id="uLj-DX-eag"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPN-Bd-CJO" userLabel="fourButton">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPN-Bd-CJO" userLabel="fourButton">
                                         <rect key="frame" x="250" y="0.0" width="78" height="78.5"/>
                                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="OPN-Bd-CJO" secondAttribute="height" multiplier="1:1" id="i2O-0f-f3D"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonFourTapped:" destination="nfl-az-eTr" eventType="touchUpInside" id="uMU-aq-811"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -391,8 +403,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xIb-2K-U1O"/>
                     </view>
+                    <connections>
+                        <outlet property="stack1aaTextTapped" destination="yAc-eE-IIt" id="f7H-rS-CyU"/>
+                        <outlet property="stack1abTextTapped" destination="NKM-dh-s2G" id="VHw-Qe-XnT"/>
+                        <outlet property="stack1baTextTapped" destination="gBI-C9-z5o" id="PpM-1x-7uJ"/>
+                        <outlet property="stack1bbTextTapped" destination="UqX-Vm-9hC" id="tVq-nm-LLS"/>
+                        <outlet property="stack2aaButtonTapped" destination="cv5-aR-i5w" id="Ead-le-LqX"/>
+                        <outlet property="stack2abButtonTapped" destination="tDv-Jc-OMQ" id="s9I-qK-hYg"/>
+                        <outlet property="stack2baButtonTapped" destination="kHT-6O-HsU" id="yfg-4e-yIP"/>
+                        <outlet property="stack2bbButtonTapped" destination="Qmb-bJ-Vie" id="lXi-0c-GeJ"/>
+                        <outlet property="stack3aaButtonTapped" destination="Aho-O7-amb" id="bAJ-4c-4h3"/>
+                        <outlet property="stack3abButtonTapped" destination="1sA-Fc-0lo" id="9SD-Vi-jb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yje-HU-5kO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nfl-az-eTr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="845.60000000000002" y="98.50074962518741"/>
         </scene>
