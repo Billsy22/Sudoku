@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ihY-qq-T1t">
+
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,8 +19,10 @@
         <!--Root View Controller-->
         <scene sceneID="x6B-ZM-5xz">
             <objects>
+
                 <tableViewController id="SmS-QW-fF8" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uZt-Qq-HrC">
+
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -416,6 +422,7 @@
                         <outlet property="stack3abButtonTapped" destination="1sA-Fc-0lo" id="9SD-Vi-jb9"/>
                     </connections>
                 </viewController>
+
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yje-HU-5kO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nfl-az-eTr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
@@ -434,6 +441,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oG-lK-jee" userLabel="First Responder" sceneMemberID="firstResponder"/>
+
             </objects>
             <point key="canvasLocation" x="-864" y="99"/>
         </scene>
