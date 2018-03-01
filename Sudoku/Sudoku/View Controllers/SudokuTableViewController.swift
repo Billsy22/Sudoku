@@ -8,9 +8,10 @@
 
 import UIKit
 
-class SudokuTableViewController: UITableViewController {
-
+class SudokuTableViewController: UITableViewController  {
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -20,20 +21,25 @@ class SudokuTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+ 
+    
+
+    @IBAction func easyButtonTapped(_ sender: Any) {
+        
     }
-
-    // MARK: - Table view data source
-
+    
+    @IBAction func mediumButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func hardButtonTapped(_ sender: Any) {
+    }
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 0
     }
 
